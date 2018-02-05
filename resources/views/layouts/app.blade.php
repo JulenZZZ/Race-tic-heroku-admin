@@ -30,10 +30,12 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 
-    <!-- SweetAlert -->
+    <!-- SweetAlert
     <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
     <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
-
+-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.js"></script>
 
 
     <link href="css/estiloshome.css" rel="stylesheet">
