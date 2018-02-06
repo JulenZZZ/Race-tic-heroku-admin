@@ -164,9 +164,9 @@
             <div class="col-md-3 col-sm-6 footer-col">
                 <h6 class="heading7">Mantente informado</h6>
                 <ul class="footer-social">
-                    <div class="iconos"><li><a href="https://es.linkedin.com/"><i class="ion-social-linkedin"></i></a></li></div>
-                    <div class="iconos"><li><a href="https://es.facebook.com/"><i class="ion-social-facebook"></i></a></li></div>
-                    <div class="iconos"><li><a href="https://es.twitter.com/"><i class="ion-social-twitter"></i></a></li></div>
+                    <div class="iconos"><li><a href="https://linkedin.com/"><i class="ion-social-linkedin" aria-hidden="true"></i></a></li></div>
+                    <div class="iconos"><li><a href="https://facebook.com/"><i class="ion-social-facebook" aria-hidden="true"></i></a></li></div>
+                    <div class="iconos"><li><a href="https://twitter.com/"><i class="ion-social-twitter" aria-hidden="true"></i></a></li></div>
 
                 </ul>
             </div>
