@@ -40,7 +40,38 @@
 
 
     <link href="css/estiloshome.css" rel="stylesheet">
+    <script>
+        window.onscroll = function(){scrollFunction()};
+        function scrollFunction() {
+            if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
 
+        $(document).ready(function() {
+            $("a[href='inicio#nosotros']").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#nosotros").offset().top
+                }, 1000);
+            });
+            $("a[href='inicio#qsomos']").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#qsomos").offset().top
+                }, 1000);
+            });
+            $("a[href='inicio#cfunciona']").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#cfunciona").offset().top
+                }, 1000);
+            });
+            $("#myBtn").click(function() {
+                
+                $('html, body').animate({scrollTop: 0}, 1000);
+            });
+        });
+    </script>
 
 
 
