@@ -67,7 +67,7 @@
                 }, 1000);
             });
             $("#myBtn").click(function() {
-                
+
                 $('html, body').animate({scrollTop: 0}, 1000);
             });
         });
@@ -93,6 +93,9 @@
              aria-expanded="false" aria-label="Toggle navigation" id="myNavbar">
             <ul class="nav navbar-nav">
                 @guest
+                    <li><a href="inicio#nosotros" name="nosotros" id="menus">¿POR QUÉ NOSOTROS?</a></li>
+                    <li><a href="inicio#qsomos" id="menus">QUIENES SOMOS</a></li>
+                    <li><a href="inicio#cfunciona" id="menus">CÓMO FUNCIONA</a></li>
                     <li><a href="contacto" id="menus">CONTACTO</a></li>
                 @else
                         <li><a href="coches" id="menus">COCHES</a></li>
