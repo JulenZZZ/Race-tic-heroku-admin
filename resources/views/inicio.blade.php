@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <button onclick="topFunction()" id="myBtn">Top</button>
+    <button id="myBtn">Subir la página</button>
 
 
 <header class="masthead text-center text-white d-flex parallax">
