@@ -164,9 +164,9 @@
             <div class="col-md-3 col-sm-6 footer-col">
                 <h6 class="heading7">Mantente informado</h6>
                 <ul class="footer-social">
-                    <li><img src=images/fi-social-linkedin.svg"><i class="fa fa-linkedin social-icon linked-in" aria-hidden="true"></i></li>
-                    <li><img src=images/fi-social-facebook.svg"><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></li>
-                    <li><img src=images/fi-social-twitter.svg"><i class="fa fa-twitter social-icon twitter" aria-hidden="true"></i></li>
+                    <li><img src=images/fi-social-linkedin.svg"></li>
+                    <li><img src=images/fi-social-facebook.svg"></li>
+                    <li><img src=images/fi-social-twitter.svg"></li>
 
                 </ul>
             </div>
