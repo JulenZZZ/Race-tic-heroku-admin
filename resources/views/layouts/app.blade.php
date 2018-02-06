@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -164,9 +164,9 @@
             <div class="col-md-3 col-sm-6 footer-col">
                 <h6 class="heading7">Mantente informado</h6>
                 <ul class="footer-social">
-                    <li><img src=../images/fi-social-linkedin.png"></li>
-                    <li><img src=../images/fi-social-facebook.png"></li>
-                    <li><img src=../images/fi-social-twitter.png"></li>
+                    <li><a href="https://es.linkedin.com/"><i class="ion-social-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://es.facebook.com/"><i class="ion-social-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://es.twitter.com/"><i class="ion-social-twitter" aria-hidden="true"></i></a></li>
 
                 </ul>
             </div>
