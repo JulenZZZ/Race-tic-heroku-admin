@@ -11,8 +11,8 @@
     <link rel="shortcut icon" href="images/racetic.png" /> <title>Race-tic</title>
 
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
@@ -33,9 +33,10 @@
     <!-- SweetAlert
     <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
     <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
--->
+
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.js"></script>
+    -->
 
 
     <link href="css/estiloshome.css" rel="stylesheet">
@@ -163,9 +164,9 @@
             <div class="col-md-3 col-sm-6 footer-col">
                 <h6 class="heading7">Mantente informado</h6>
                 <ul class="footer-social">
-                    <li><a href="https://es.linkedin.com/"><i class="fa fa-linkedin social-icon linked-in" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.facebook.com"><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.twitter.com"><i class="fa fa-twitter social-icon twitter" aria-hidden="true"></i></a></li>
+                    <li><img src=images/fi-social-linkedin.svg"><i class="fa fa-linkedin social-icon linked-in" aria-hidden="true"></i></li>
+                    <li><img src=images/fi-social-facebook.svg"><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></li>
+                    <li><img src=images/fi-social-twitter.svg"><i class="fa fa-twitter social-icon twitter" aria-hidden="true"></i></li>
 
                 </ul>
             </div>
