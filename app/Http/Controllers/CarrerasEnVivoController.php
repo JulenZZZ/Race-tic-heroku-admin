@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Coche;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CarrerasEnVivoController extends Controller
 {
@@ -15,7 +17,15 @@ class CarrerasEnVivoController extends Controller
 
     }
     public function index(){
-        return view('Carreras.carrerasenvivo');
+
+        $id = Auth::user()->id;
+        $datocarreras = DB::table('carreras')->where('usuario_id',$id)->count();
+        if($datocarreras > 0){
+            return view('Carreras.carrerasenvivo');
+        }else{
+            return back();
+        }
+
 
     }
 
