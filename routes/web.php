@@ -14,7 +14,7 @@
 
 
 Route::get('/', function () {
-    return view('inicio');
+    return redirect('inicio');
 });
 Route::get('/inicio', function () {
     return view('inicio');
