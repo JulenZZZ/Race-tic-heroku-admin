@@ -97,9 +97,18 @@
                     <li><a href="inicio#cfunciona" id="menus">CÓMO FUNCIONA</a></li>
                     <li><a href="contacto" id="menus">CONTACTO</a></li>
                 @else
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">INFORMACIÓN<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="inicio#nosotros" name="nosotros" id="menus">¿POR QUÉ NOSOTROS?</a></li>
+                            <li><a href="inicio#qsomos" id="menus">QUIENES SOMOS</a></li>
+                            <li><a href="inicio#cfunciona" id="menus">CÓMO FUNCIONA</a></li>
+                        </ul>
+                    </li>
                         <li><a href="coches" id="menus">COCHES</a></li>
-                        <li><a href="contacto" id="menus">CONTACTO</a></li>
+
                         <li><a href="carreras" id="menus">CARRERAS</a></li>
+                        <li><a href="contacto" id="menus">CONTACTO</a></li>
                 @endguest
             </ul>
             <ul class="nav navbar-nav navbar-right">
