@@ -30,7 +30,7 @@
                      }
 
                     $arraycarreras = array();
-                    $carrerasreg = DB::table('carreras_registros')->where("carrera_id",$numidcarrera)->get();
+                    $carrerasreg = DB::table('carreras_registros')->where("carrera_id",$numidcarrera)->orderBy('id_registro','desc')->get();
                     array_push($arraycarreras, $carrerasreg);
 
 
@@ -114,6 +114,17 @@
         </div>
 
     </div>
+
+    <script>
+
+        $(document).ready(function(){
+            setTimeout(function(){
+                location.reload();
+            }, 10000);
+        });
+
+
+    </script>
 
     <script>
         var ctx = document.getElementById("myChart").getContext('2d');
