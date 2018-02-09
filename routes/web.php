@@ -88,6 +88,13 @@ Route::prefix('admin')->group(function() {
         return view('admin.home');
     });
 
+    // Gestor de usuarios //
+    Route::get('/VerUsuarios','GestionarUsuariosController@ver');
+    Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
+    Route::get('/EditarUsuario/{id}', 'GestionarUsuariosController@editar');
+    Route::put ('/adminActualizarUsuario/{id}','GestionarUsuariosController@update');
+    // /Gestor de usuarios//
+
 
     Route::get('/password/reset', 'AuthAdmin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
     Route::post('/password/email', 'AuthAdmin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
@@ -96,10 +103,7 @@ Route::prefix('admin')->group(function() {
 });
 
 
-Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
-Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
-Route::get('/adminEditarUsuario/{id}', 'GestionarUsuariosController@editar');
-Route::put ('/adminActualizarUsuario/{id}','GestionarUsuariosController@update');
+
 
 
 

@@ -32,7 +32,9 @@
     padding: 15px;
     border-radius: 10px;
 }
-
+#myBtn:hover{
+    color: #F05F40;
+}
 
 li {
     font-family: Montserrat, sans-serif;
