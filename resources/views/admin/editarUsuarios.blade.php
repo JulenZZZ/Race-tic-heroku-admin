@@ -1,15 +1,13 @@
 @extends('layouts.adminapp')
 
-<link href="{{ asset('../css/estilosadmin.css') }}" rel="stylesheet" type="text/css" >
-<link href="{{ asset('../css/app.css') }}" rel="stylesheet" type="text/css" >
+<link href="{{ asset('../css/estilosadmin.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('../css/app.css') }}" rel="stylesheet" type="text/css">
 
 @section('content')
     <table>
         <form method="post" action="{{ url('/adminActualizarUsuario/'.$data->id) }}">
             <input type="hidden" name="_token" value="{{ csrf_field() }}">
             {{ method_field('PUT') }}
-
-
             <div>
                 <table align="center" class="editor table">
                     <tr>
