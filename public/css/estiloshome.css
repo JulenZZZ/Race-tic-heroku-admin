@@ -254,7 +254,8 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
     top: 40%;
 }
 .modal-body {
-    background-color: #0f8845;
+    /*background-color: #0f8845;*/
+    background-color: white;
     color: white;
 }
 
