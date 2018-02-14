@@ -6,8 +6,9 @@
 @section('content')
     <table>
         <form method="post" action="{{ url('/adminActualizarUsuario/'.$data->id) }}">
+            <input type="hidden" name="_token" value="{{ csrf_field() }}">
             {{ method_field('PUT') }}
-            {{ csrf_field() }}
+
 
             <div>
                 <table align="center" class="editor table">
