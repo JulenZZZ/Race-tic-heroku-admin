@@ -20,7 +20,7 @@
                 <tr>
                     <td class="contenidoTabla">{{ $data->name }}</td>
                     <td class="contenidoTabla">{{ $data->email }}</td>
-                    <td class="contenidoTabla"><a href="adminEliminarUsuario/{{ $data -> id }}" class="boton eliminar">Eliminar</a></td>
+                    <td class="contenidoTabla"><a id="eliminar" data-toggle="modal" data-target="#myModal" class="boton eliminar">Eliminar</a></td>
                     <td class="contenidoTabla"><a href="{{ url('admin/EditarUsuario/'.$data->id) }}" class="boton editar">Editar</a></td>
                     <td class="contenidoTabla" id="confirmacion">
                         @if($data -> verified == 0)
