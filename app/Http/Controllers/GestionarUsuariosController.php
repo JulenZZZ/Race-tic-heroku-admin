@@ -18,13 +18,13 @@ class GestionarUsuariosController extends Controller
     {
         //funcion que elimina usuarios
         DB::table('users')->where('id', '=', $id)->delete();
-        return redirect('/VerUsuarios');
+        return redirect('admin/VerUsuarios');
     }
     public function editar($id)
     {
         //funcion que edita usuarios
         $data = User::find($id);
-        return view('admin.EditarUsuarios', compact('data'));
+        return view('admin/admin.EditarUsuarios', compact('data'));
     }
     public function update(Request $request, $id)
     {
@@ -33,7 +33,7 @@ class GestionarUsuariosController extends Controller
         $data->name = $request->input('name');
         $data->email = $request->input('email');
         $data->update();
-        return \redirect('/VerUsuarios');
+        return \redirect('admin/VerUsuarios');
     }
 
 }
