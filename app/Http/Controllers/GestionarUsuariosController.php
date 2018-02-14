@@ -24,7 +24,7 @@ class GestionarUsuariosController extends Controller
     {
         //funcion que edita usuarios
         $data = User::find($id);
-        return view('admin.EditarUsuarios', compact('data'));
+        return view('admin.editarUsuarios', compact('data'));
     }
     public function update(Request $request, $id)
     {
