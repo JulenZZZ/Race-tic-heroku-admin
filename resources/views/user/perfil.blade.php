@@ -4,74 +4,75 @@
 
 
     <div class="well">
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'datos')" id="defaultOpen">Datos</button>
-        <!--<button class="tablinks" onclick="openTab(event, 'coches')">Coches asociados</button>-->
-
-    </div>
-
-    <div id="datos" class="tabcontent">
-
-        <div class="row">
-            <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
-            </div>
-            <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
-                <div class="container">
-                    <h2>{{ Auth::user()->name }}</h2>
-                </div>
-                <hr>
-                <div class="container details">
-                    <p><i class="fa fa-envelope"></i>  Correo Electronico:   {{Auth::user()->email }}</p>
-                    <br>
-
-                    <p><i class="glyphicon glyphicon-lock"></i>  Contraseña: ********</p>
-                </div>
-                <button type="button" data-toggle="modal" data-target="#login-modal" class="md-btn ">Cambiar Contraseña</button>
-            </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'datos')" id="defaultOpen">Datos</button>
+            <!--<button class="tablinks" onclick="openTab(event, 'coches')">Coches asociados</button>-->
 
         </div>
-    </div>
+
+        <div id="datos" class="tabcontent">
+
+            <div class="row">
+                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                    <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                    <div class="container">
+                        <h2>{{ Auth::user()->name }}</h2>
+                    </div>
+                    <hr>
+                    <div class="container details">
+                        <p><i class="fa fa-envelope"></i>  Correo Electronico:   {{Auth::user()->email }}</p>
+                        <br>
+
+                        <p><i class="glyphicon glyphicon-lock"></i>  Contraseña: ********</p>
+                    </div>
+                    <button type="button" data-toggle="modal" data-target="#login-modal" class="md-btn ">Cambiar Contraseña</button>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-           <div class="modal-dialog">
-               <div class="loginmodal-container">
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
 
-                   <form id="formulario" action="dato" method="post">
-                       {{ csrf_field() }}
-                       <button type="button" aria-label="Close" class="btn pull-right" data-dismiss="modal" ><span aria-hidden="true">&times;</span> </button>
+                <form id="formulario" action="dato" method="post">
+                    {{ csrf_field() }}
+                    <button type="button" aria-label="Close" class="btn pull-right" data-dismiss="modal" ><span aria-hidden="true">&times;</span> </button>
 
-                       <p>Nueva Contraseña</p>
-                       <input type="password" id="pass" name="pass">
-                       <p>Confirmar Contraseña</p>
-                       <input type="password" id="passconf" name="passconf" required>
+                    <p>Nueva Contraseña</p>
+                    <input type="password" id="pass" name="pass">
+                    <p>Confirmar Contraseña</p>
+                    <input type="password" id="passconf" name="passconf" required>
 
-                       <!--<p>Contraseña a validar</p>
-                       <input type="text" id="form1" name="form1" value="">-->
-
-
-                       <button type="submit" class="btn btn-block login loginmodal-submit">
-                           Cambiar</button>
-                       <button type="button" onclick="this.form.reset()" class="btn btn-block login loginmodal-submit">
-                           Limpiar</button>
+                    <!--<p>Contraseña a validar</p>
+                    <input type="text" id="form1" name="form1" value="">-->
 
 
-                       <br>
-                       <div id="errordiv" class="alert alert-danger" hidden>
-                           <strong>Error!</strong> Las contraseñas deben coincidir y tener como mínimo 6 carácteres.
-                       </div>
-                       <div id="errordiv2" class="alert alert-danger" hidden>
-                           <strong>Error!</strong> Contraseña actual errónea
-                       </div>
+                    <button type="submit" class="btn btn-block login loginmodal-submit">
+                        Cambiar</button>
+                    <button type="button" onclick="this.form.reset()" class="btn btn-block login loginmodal-submit">
+                        Limpiar</button>
 
-                   </form>
-               </div>
-           </div>
+
+                    <br>
+                    <div id="errordiv" class="alert alert-danger" hidden>
+                        <strong>Error!</strong> Las contraseñas deben coincidir y tener como mínimo 6 carácteres.
+                    </div>
+                    <div id="errordiv2" class="alert alert-danger" hidden>
+                        <strong>Error!</strong> Contraseña actual errónea
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
 
-    <script >
+
+    <script>
         $(document).ready(iniciar);
 
         function iniciar(){
@@ -83,10 +84,12 @@
 
             event.preventDefault();
 
-            var pass =$("#pass");
-            var passconf = $("#passconf");
+            //var pass =$("#pass");
+            //var passconf = $("#passconf");
+            var pass = document.getElementById("pass");
+            var passconf = document.getElementById("passconf");
 
-            if(pass.val().length < 6 || pass.val().length < 6){
+            if(pass.value.length < 6 || pass.value.length < 6){
 
                 console.log("contraseña menor a 6");
                 $("#errordiv").collapse();
@@ -96,7 +99,12 @@
 
                 console.log("las contraseñas no coinciden");
                 $("#errordiv").collapse();
+                var form = $("#formulario");
+                for(var i=0 ; i< form.length; i++)
+                {
 
+                    form[i].reset();
+                }
 
 
             }else{
@@ -123,11 +131,12 @@
 
                 console.log("contraseña cambiada");
 
-                var form = $("#formulario");
-                for(var i=0 ; i< form.length; i++)
+                var form2 = $("#formulario");
+                for(var i2=0 ; i2< form2.length; i2++)
                 {
 
-                    form[i].reset();
+                    form2[i2].reset();
+                    $("#errordiv").collapse("hide");
                 }
 
             }
@@ -152,4 +161,4 @@
         document.getElementById("defaultOpen").click();
     </script>
 
-   @endsection
+@endsection
