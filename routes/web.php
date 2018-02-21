@@ -78,7 +78,7 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
 Route::prefix('admin')->group(function() {
-    Route::get('/', 'AdminController@index')->name('admin.home');
+    Route::get('/', 'AdminController@index')->middleware('admin');
     Route::get('/home', 'AdminController@index')->name('admin.home');
     Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');
@@ -88,8 +88,10 @@ Route::prefix('admin')->group(function() {
         return view('admin.home');
     });
 
+    //name('admin.home')
+
     // Gestor de usuarios //
-    Route::get('/VerUsuarios','GestionarUsuariosController@ver');
+    Route::get('/VerUsuarios','GestionarUsuariosController@ver')->middleware('admin');
     Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
     Route::get('/EditarUsuario/{id}', 'GestionarUsuariosController@editar');
     Route::put ('/adminActualizarUsuario/{id}','GestionarUsuariosController@update');

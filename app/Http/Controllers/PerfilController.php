@@ -45,7 +45,7 @@ class PerfilController extends Controller
 
         }
     }
-
+/*
     public function setOldPass(String $passok){
         $this->passok = $passok;
     }
@@ -53,7 +53,7 @@ class PerfilController extends Controller
     public function getOldPass(){
         return $this->passok;
     }
-
+*/
 
 
 

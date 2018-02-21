@@ -48,8 +48,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="adminVerUsuarios" id="menus">Ver usuario </a></li>
-                <li><a href="home2" id="menus">Prueba </a></li>
+                @if(Auth::guard('admin')->user())
+                    <li><a href="adminVerUsuarios" id="menus">Ver usuario </a></li>
+                    <li><a href="home2" id="menus">Prueba </a></li>
+                @endif
             </ul>
             <ul class="nav navbar-nav navbar-right">
 

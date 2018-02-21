@@ -18,7 +18,7 @@ class GestionarUsuariosController extends Controller
     {
         //funcion que elimina usuarios
         DB::table('users')->where('id', '=', $id)->delete();
-        return redirect('admin/VerUsuarios');
+        return redirect('/admin/VerUsuarios');
     }
     public function editar($id)
     {
@@ -33,7 +33,7 @@ class GestionarUsuariosController extends Controller
         $data->name = $request->input('name');
         $data->email = $request->input('email');
         $data->update();
-        return \redirect('admin/VerUsuarios');
+        return \redirect('/admin/VerUsuarios');
     }
 
 }
