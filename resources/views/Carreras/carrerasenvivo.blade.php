@@ -64,7 +64,7 @@
                         @foreach ($arraycarreras as $arrayCarrera)
                             @foreach($arrayCarrera as $object)
                                 <tr>
-                                    <th>{{ $object->temperatura}}</th>
+                                    <th>{{ $object->velocidad}}</th>
                                     <th>{{ $object->revoluciones }}</th>
                                     <th>{{ $object->temperatura }}</th>
                                 </tr>
@@ -129,52 +129,62 @@
     <script>
         var ctx = document.getElementById("myChart").getContext('2d');
 
-
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
-                @foreach($carrerasreg as $objmostfecha)
+                labels: [4000,4500,5000,5500,6000,6500],
+                datasets: [{
 
-                labels: ['{{$objmostfecha->created_at}}'],
-                @endforeach
+                    data: [90,100,130,120,100,85],
+                    label: "Temperatura Cº",
+                    borderColor: "#3e95cd",
+                    fill: false
+                },
+                    {
+                        data: [3000,3500,4500,3500,2000,2200],
+                        label: "Revoluciones(RPM)",
+                        borderColor: "#8e5ea2",
+                        fill: false
+                    }, {
+                        data: [170,180,200,180,150,100],
+                        label: "Velocidad(Km/h)",
+                        borderColor: "#3cba9f",
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Temperatura del motor, velocidad y revoluciones a lo largo de la carrera'
+                }
+            }
+
+
+
+
+        });
+    /*
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            labels: [90,110,150,180,200,225,230],
+            data: {
 
                 datasets: [{
-                    width:10,
-                    height:50,
-                    label: 'Temperatura ºC',
-                    @foreach($carrerasreg as $objmost)
-
-                    data: [{{$objmost->temperatura}}],
-                    @endforeach
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
+                    data: [90,100,130,120,100,85,50],
+                    label: "Temperatura Cº",
+                    borderColor: "#3e95cd",
+                    fill: false
                 }]
             },
             options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero:true
-                        }
-                    }]
+                title: {
+                    display: true,
+                    text: 'Temperatura del motor cada 10 segundos'
                 }
             }
         });
+*/
 
 
         $(".refrescar").on("click",function(){
